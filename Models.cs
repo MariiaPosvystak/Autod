@@ -12,7 +12,6 @@ namespace Autod
         public string FullName { get; set; }
         public string Phone { get; set; }
 
-        public ICollection<Car> Cars { get; set; }
     }
     public class Car
     {
