@@ -73,6 +73,7 @@ namespace Autod
             oma_nimi_txt.Clear();
             oma_tel_txt.Clear();
         }
+
         private void Lisa_auto_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(brand_auto_txt.Text))
