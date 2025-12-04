@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
 
 namespace Autod.Data
 {
@@ -29,6 +30,7 @@ namespace Autod.Data
             modelBuilder.Entity<CarService>().ToTable("Hoolduse_Kirje");
             modelBuilder.Entity<CarService>().Property(cs => cs.DateOfService).HasDefaultValueSql("GETDATE()");
             modelBuilder.Entity<CarService>().HasKey(cs => new { cs.CarId, cs.ServiceId });
+            modelBuilder.Entity<Car>().HasOne(c => c.Owner);
 
         }
         public void EnsureCreated()

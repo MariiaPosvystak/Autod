@@ -60,9 +60,19 @@
             brand_auto_txt = new TextBox();
             lisa_auto_btn = new Button();
             puhasta_auto_btn = new Button();
+            Kust_hjt_btn = new Button();
+            Lisavorm_hjt_btn = new Button();
+            vaata_hjt_btn = new Button();
+            Otsi_oma_btn = new Button();
+            uue_oma_btn = new Button();
+            Otsi_auto_btn = new Button();
+            uue_auto_btn = new Button();
+            Otsi_hjt_btn = new Button();
+            uue_hjt_btn = new Button();
             tabC.SuspendLayout();
             Omanik.SuspendLayout();
             Autod.SuspendLayout();
+            HjT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView_omanik).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_autod).BeginInit();
             SuspendLayout();
@@ -81,6 +91,8 @@
             // 
             // Omanik
             // 
+            Omanik.Controls.Add(uue_oma_btn);
+            Omanik.Controls.Add(Otsi_oma_btn);
             Omanik.Controls.Add(Kustuta_oma_btn);
             Omanik.Controls.Add(Lisavorm_oma_btn);
             Omanik.Controls.Add(Vaata_oma_btn);
@@ -92,13 +104,42 @@
             Omanik.Text = "Omanikud";
             Omanik.UseVisualStyleBackColor = true;
             // 
+            // Autod
+            // 
+            Autod.Controls.Add(Kust_auto_btm);
+            Autod.Controls.Add(Lisavorm_auto_btn);
+            Autod.Controls.Add(Vaata_auto_btn);
+            Autod.Controls.Add(uue_auto_btn);
+            Autod.Controls.Add(Otsi_auto_btn);
+            Autod.Location = new Point(4, 24);
+            Autod.Name = "Autod";
+            Autod.Padding = new Padding(3);
+            Autod.Size = new Size(348, 205);
+            Autod.TabIndex = 1;
+            Autod.Text = "Autod";
+            Autod.UseVisualStyleBackColor = true;
+            // 
+            // HjT
+            // 
+            HjT.Controls.Add(Kust_hjt_btn);
+            HjT.Controls.Add(Lisavorm_hjt_btn);
+            HjT.Controls.Add(vaata_hjt_btn);
+            HjT.Controls.Add(uue_hjt_btn);
+            HjT.Controls.Add(Otsi_hjt_btn);
+            HjT.Location = new Point(4, 24);
+            HjT.Name = "HjT";
+            HjT.Size = new Size(348, 205);
+            HjT.TabIndex = 2;
+            HjT.Text = "Hooldus ja Teenused";
+            HjT.UseVisualStyleBackColor = true;
+            // 
             // Kustuta_oma_btn
             // 
             Kustuta_oma_btn.BackColor = Color.Gray;
             Kustuta_oma_btn.ForeColor = SystemColors.ControlLightLight;
-            Kustuta_oma_btn.Location = new Point(54, 153);
+            Kustuta_oma_btn.Location = new Point(6, 148);
             Kustuta_oma_btn.Name = "Kustuta_oma_btn";
-            Kustuta_oma_btn.Size = new Size(255, 35);
+            Kustuta_oma_btn.Size = new Size(162, 51);
             Kustuta_oma_btn.TabIndex = 2;
             Kustuta_oma_btn.Text = "Kustuta";
             Kustuta_oma_btn.UseVisualStyleBackColor = false;
@@ -108,9 +149,9 @@
             // 
             Lisavorm_oma_btn.BackColor = Color.Gray;
             Lisavorm_oma_btn.ForeColor = SystemColors.ControlLight;
-            Lisavorm_oma_btn.Location = new Point(54, 85);
+            Lisavorm_oma_btn.Location = new Point(6, 79);
             Lisavorm_oma_btn.Name = "Lisavorm_oma_btn";
-            Lisavorm_oma_btn.Size = new Size(255, 35);
+            Lisavorm_oma_btn.Size = new Size(162, 51);
             Lisavorm_oma_btn.TabIndex = 1;
             Lisavorm_oma_btn.Text = "Lisavorm";
             Lisavorm_oma_btn.UseVisualStyleBackColor = false;
@@ -120,26 +161,35 @@
             // 
             Vaata_oma_btn.BackColor = Color.Gray;
             Vaata_oma_btn.ForeColor = SystemColors.ControlLightLight;
-            Vaata_oma_btn.Location = new Point(54, 18);
+            Vaata_oma_btn.Location = new Point(6, 6);
             Vaata_oma_btn.Name = "Vaata_oma_btn";
-            Vaata_oma_btn.Size = new Size(255, 35);
+            Vaata_oma_btn.Size = new Size(162, 51);
             Vaata_oma_btn.TabIndex = 0;
             Vaata_oma_btn.Text = "Vaata";
             Vaata_oma_btn.UseVisualStyleBackColor = false;
             Vaata_oma_btn.Click += Vaata_Click;
             // 
-            // Autod
+            // Otsi_oma_btn
             // 
-            Autod.Controls.Add(Kust_auto_btm);
-            Autod.Controls.Add(Lisavorm_auto_btn);
-            Autod.Controls.Add(Vaata_auto_btn);
-            Autod.Location = new Point(4, 24);
-            Autod.Name = "Autod";
-            Autod.Padding = new Padding(3);
-            Autod.Size = new Size(348, 205);
-            Autod.TabIndex = 1;
-            Autod.Text = "Autod";
-            Autod.UseVisualStyleBackColor = true;
+            Otsi_oma_btn.BackColor = Color.Gray;
+            Otsi_oma_btn.ForeColor = SystemColors.ControlLight;
+            Otsi_oma_btn.Location = new Point(180, 41);
+            Otsi_oma_btn.Name = "Otsi_oma_btn";
+            Otsi_oma_btn.Size = new Size(162, 51);
+            Otsi_oma_btn.TabIndex = 3;
+            Otsi_oma_btn.Text = "Otsi";
+            Otsi_oma_btn.UseVisualStyleBackColor = false;
+            // 
+            // uue_oma_btn
+            // 
+            uue_oma_btn.BackColor = Color.Gray;
+            uue_oma_btn.ForeColor = SystemColors.ControlLight;
+            uue_oma_btn.Location = new Point(180, 115);
+            uue_oma_btn.Name = "uue_oma_btn";
+            uue_oma_btn.Size = new Size(162, 51);
+            uue_oma_btn.TabIndex = 4;
+            uue_oma_btn.Text = "Uuenda";
+            uue_oma_btn.UseVisualStyleBackColor = false;
             // 
             // Kust_auto_btm
             // 
@@ -177,14 +227,82 @@
             Vaata_auto_btn.UseVisualStyleBackColor = false;
             Vaata_auto_btn.Click += Vaata_auto_btn_Click;
             // 
-            // HjT
+            // Otsi_auto_btn
             // 
-            HjT.Location = new Point(4, 24);
-            HjT.Name = "HjT";
-            HjT.Size = new Size(348, 205);
-            HjT.TabIndex = 2;
-            HjT.Text = "Hooldus ja Teenused";
-            HjT.UseVisualStyleBackColor = true;
+            Otsi_auto_btn.BackColor = Color.Gray;
+            Otsi_auto_btn.ForeColor = SystemColors.ControlLight;
+            Otsi_auto_btn.Location = new Point(180, 41);
+            Otsi_auto_btn.Name = "Otsi_oma_btn";
+            Otsi_auto_btn.Size = new Size(162, 51);
+            Otsi_auto_btn.TabIndex = 3;
+            Otsi_auto_btn.Text = "Otsi";
+            Otsi_auto_btn.UseVisualStyleBackColor = false;
+            // 
+            // uue_auto_btn
+            // 
+            uue_auto_btn.BackColor = Color.Gray;
+            uue_auto_btn.ForeColor = SystemColors.ControlLight;
+            uue_auto_btn.Location = new Point(180, 115);
+            uue_auto_btn.Name = "uue_oma_btn";
+            uue_auto_btn.Size = new Size(162, 51);
+            uue_auto_btn.TabIndex = 4;
+            uue_auto_btn.Text = "Uuenda";
+            uue_auto_btn.UseVisualStyleBackColor = false;
+            // 
+            // Kust_hjt_btn
+            // 
+            Kust_hjt_btn.BackColor = Color.Gray;
+            Kust_hjt_btn.ForeColor = SystemColors.ControlLightLight;
+            Kust_hjt_btn.Location = new Point(47, 152);
+            Kust_hjt_btn.Name = "Kust_hjt_btn";
+            Kust_hjt_btn.Size = new Size(255, 35);
+            Kust_hjt_btn.TabIndex = 6;
+            Kust_hjt_btn.Text = "Kustuta";
+            Kust_hjt_btn.UseVisualStyleBackColor = false;
+            // 
+            // Lisavorm_hjt_btn
+            // 
+            Lisavorm_hjt_btn.BackColor = Color.Gray;
+            Lisavorm_hjt_btn.ForeColor = SystemColors.ControlLight;
+            Lisavorm_hjt_btn.Location = new Point(47, 86);
+            Lisavorm_hjt_btn.Name = "Lisavorm_hjt_btn";
+            Lisavorm_hjt_btn.Size = new Size(255, 35);
+            Lisavorm_hjt_btn.TabIndex = 5;
+            Lisavorm_hjt_btn.Text = "Lisavorm";
+            Lisavorm_hjt_btn.UseVisualStyleBackColor = false;
+            // 
+            // vaata_hjt_btn
+            // 
+            vaata_hjt_btn.BackColor = Color.Gray;
+            vaata_hjt_btn.ForeColor = SystemColors.ControlLightLight;
+            vaata_hjt_btn.Location = new Point(47, 18);
+            vaata_hjt_btn.Name = "vaata_hjt_btn";
+            vaata_hjt_btn.Size = new Size(255, 35);
+            vaata_hjt_btn.TabIndex = 4;
+            vaata_hjt_btn.Text = "Vaata";
+            vaata_hjt_btn.UseVisualStyleBackColor = false;
+            // 
+            // Otsi_oma_btn
+            // 
+            Otsi_oma_btn.BackColor = Color.Gray;
+            Otsi_oma_btn.ForeColor = SystemColors.ControlLight;
+            Otsi_oma_btn.Location = new Point(180, 41);
+            Otsi_oma_btn.Name = "Otsi_oma_btn";
+            Otsi_oma_btn.Size = new Size(162, 51);
+            Otsi_oma_btn.TabIndex = 3;
+            Otsi_oma_btn.Text = "Otsi";
+            Otsi_oma_btn.UseVisualStyleBackColor = false;
+            // 
+            // uue_oma_btn
+            // 
+            uue_oma_btn.BackColor = Color.Gray;
+            uue_oma_btn.ForeColor = SystemColors.ControlLight;
+            uue_oma_btn.Location = new Point(180, 115);
+            uue_oma_btn.Name = "uue_oma_btn";
+            uue_oma_btn.Size = new Size(162, 51);
+            uue_oma_btn.TabIndex = 4;
+            uue_oma_btn.Text = "Uuenda";
+            uue_oma_btn.UseVisualStyleBackColor = false;
             // 
             // dataGridView_omanik
             // 
@@ -279,7 +397,7 @@
             // 
             Mudel_auto_lbl.AutoSize = true;
             Mudel_auto_lbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 186);
-            Mudel_auto_lbl.Location = new Point(31, 126);
+            Mudel_auto_lbl.Location = new Point(31, 110);
             Mudel_auto_lbl.Name = "Mudel_auto_lbl";
             Mudel_auto_lbl.Size = new Size(54, 21);
             Mudel_auto_lbl.TabIndex = 3;
@@ -289,7 +407,7 @@
             // 
             RN_auto_lbl.AutoSize = true;
             RN_auto_lbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 186);
-            RN_auto_lbl.Location = new Point(31, 176);
+            RN_auto_lbl.Location = new Point(31, 150);
             RN_auto_lbl.Name = "RN_auto_lbl";
             RN_auto_lbl.Size = new Size(165, 21);
             RN_auto_lbl.TabIndex = 4;
@@ -299,7 +417,7 @@
             // 
             OmaId_auto_lbl.AutoSize = true;
             OmaId_auto_lbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 186);
-            OmaId_auto_lbl.Location = new Point(31, 220);
+            OmaId_auto_lbl.Location = new Point(31, 194);
             OmaId_auto_lbl.Name = "OmaId_auto_lbl";
             OmaId_auto_lbl.Size = new Size(65, 21);
             OmaId_auto_lbl.TabIndex = 5;
@@ -309,7 +427,7 @@
             // 
             Brand_auto_lbl.AutoSize = true;
             Brand_auto_lbl.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 186);
-            Brand_auto_lbl.Location = new Point(31, 82);
+            Brand_auto_lbl.Location = new Point(31, 68);
             Brand_auto_lbl.Name = "Brand_auto_lbl";
             Brand_auto_lbl.Size = new Size(51, 21);
             Brand_auto_lbl.TabIndex = 6;
@@ -318,28 +436,28 @@
             // OmaId_auto_cb
             // 
             OmaId_auto_cb.FormattingEnabled = true;
-            OmaId_auto_cb.Location = new Point(219, 218);
+            OmaId_auto_cb.Location = new Point(219, 189);
             OmaId_auto_cb.Name = "OmaId_auto_cb";
             OmaId_auto_cb.Size = new Size(130, 23);
             OmaId_auto_cb.TabIndex = 7;
             // 
             // RN_auto_txt
             // 
-            RN_auto_txt.Location = new Point(219, 174);
+            RN_auto_txt.Location = new Point(219, 148);
             RN_auto_txt.Name = "RN_auto_txt";
             RN_auto_txt.Size = new Size(130, 23);
             RN_auto_txt.TabIndex = 8;
             // 
             // mudel_auto_txt
             // 
-            mudel_auto_txt.Location = new Point(219, 124);
+            mudel_auto_txt.Location = new Point(219, 108);
             mudel_auto_txt.Name = "mudel_auto_txt";
             mudel_auto_txt.Size = new Size(130, 23);
             mudel_auto_txt.TabIndex = 9;
             // 
             // brand_auto_txt
             // 
-            brand_auto_txt.Location = new Point(219, 80);
+            brand_auto_txt.Location = new Point(219, 66);
             brand_auto_txt.Name = "brand_auto_txt";
             brand_auto_txt.Size = new Size(130, 23);
             brand_auto_txt.TabIndex = 10;
@@ -352,7 +470,7 @@
             lisa_auto_btn.TabIndex = 7;
             lisa_auto_btn.Text = "Lisa";
             lisa_auto_btn.UseVisualStyleBackColor = true;
-            lisa_auto_btn.Click += Lisa_oma_Click;
+            lisa_auto_btn.Click += Lisa_auto_Click;
             // 
             // puhasta_auto_btn
             // 
@@ -362,7 +480,7 @@
             puhasta_auto_btn.TabIndex = 8;
             puhasta_auto_btn.Text = "Puhasta";
             puhasta_auto_btn.UseVisualStyleBackColor = true;
-            puhasta_auto_btn.Click += puhasta_oma_Click;
+            puhasta_auto_btn.Click += puhasta_auto_Click;
             // 
             // Form1
             // 
@@ -376,6 +494,7 @@
             tabC.ResumeLayout(false);
             Omanik.ResumeLayout(false);
             Autod.ResumeLayout(false);
+            HjT.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView_omanik).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_autod).EndInit();
             ResumeLayout(false);
@@ -415,5 +534,14 @@
         private TextBox brand_auto_txt;
         private Button lisa_auto_btn;
         private Button puhasta_auto_btn;
+        private Button Kust_hjt_btn;
+        private Button Lisavorm_hjt_btn;
+        private Button vaata_hjt_btn;
+        private Button uue_oma_btn;
+        private Button Otsi_oma_btn;
+        private Button uue_auto_btn;
+        private Button Otsi_auto_btn;
+        private Button uue_hjt_btn;
+        private Button Otsi_hjt_btn;
     }
 }

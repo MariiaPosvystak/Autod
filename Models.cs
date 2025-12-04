@@ -11,6 +11,7 @@ namespace Autod
         public int Id { get; set; }
         public string FullName { get; set; }
         public string Phone { get; set; }
+        public ICollection<Car> Cars { get; set; }
 
     }
     public class Car
@@ -20,7 +21,6 @@ namespace Autod
         public string Model { get; set; }
         public string RegistrationNumber { get; set; }
         public int OwnerId { get; set; }
-
         public Owner Owner { get; set; }
         public ICollection<CarService> CarServices { get; set; }
     }
