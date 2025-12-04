@@ -208,6 +208,7 @@ namespace Autod
                 );
             if (vastus == DialogResult.Yes)
             {
+
                 try
                 {
                     int id = (int)dataGridView_autod.SelectedRows[0].Cells["Id"].Value;
