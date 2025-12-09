@@ -7,9 +7,6 @@ namespace Autod
 {
     public partial class Form1 : Form
     {
-        /// 
-        /// Form
-        /// 
         private readonly AutoDbContext _db;
         public Form1()
         {
