@@ -1,5 +1,6 @@
 using Autod.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace Autod
@@ -22,134 +23,10 @@ namespace Autod
                 db.Database.EnsureCreated();
             }
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            Kustuta_oma_btn.Enabled = false;
-            toolTip.SetToolTip(Kustuta_oma_btn, "Tabelist andmete kustutamiseks valige kustutatavad isikud.");
-            Kustuta_oma_btn.ForeColor = Color.Silver;
-
-            Kust_auto_btm.Enabled = false;
-            Kust_auto_btm.ForeColor = Color.Silver;
-            toolTip.SetToolTip(Kust_auto_btm, "Tabelist andmete kustutamiseks valige kustutatavad isikud.");
-        }
-        private void tabC_Click(object sender, EventArgs e)
-        {
-            // Omanik
-            Controls.Remove(dataGridView_omanik);
-            Controls.Remove(puhasta_oma_btn);
-            Controls.Remove(lisa_oma_btn);
-            Controls.Remove(name_oma_lbl);
-            Controls.Remove(oma_tel_txt);
-            Controls.Remove(Telefon_oma_lbl);
-            Controls.Remove(oma_nimi_txt);
-            Controls.Remove(Omanikud);
-
-            Kustuta_oma_btn.Enabled = false;
-            Kustuta_oma_btn.ForeColor = Color.Silver;
-
-            //Autod
-            Controls.Remove(dataGridView_autod);
-            Controls.Remove(brand_auto_txt);
-            Controls.Remove(mudel_auto_txt);
-            Controls.Remove(RN_auto_txt);
-            Controls.Remove(OmaId_auto_cb);
-            Controls.Remove(Brand_auto_lbl);
-            Controls.Remove(OmaId_auto_lbl);
-            Controls.Remove(RN_auto_lbl);
-            Controls.Remove(Mudel_auto_lbl);
-            Controls.Remove(Autod_lbl);
-            Controls.Remove(lisa_auto_btn);
-            Controls.Remove(puhasta_auto_btn);
-
-            Kust_auto_btm.Enabled = false;
-            Kust_auto_btm.ForeColor = Color.Silver;
-        }
-        ///
-        /// Omanik
-        ///
         private void LaeOmanik()
         {
             dataGridView_omanik.DataSource = _db.Omanik.ToList();
         }
-        private void Lisa_Click(object sender, EventArgs e)
-        {
-            Controls.Add(puhasta_oma_btn);
-            Controls.Add(lisa_oma_btn);
-            Controls.Add(name_oma_lbl);
-            Controls.Add(oma_tel_txt);
-            Controls.Add(Telefon_oma_lbl);
-            Controls.Add(oma_nimi_txt);
-            Controls.Add(Omanikud);
-        }
-        private void Lisa_oma_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(oma_nimi_txt.Text))
-            {
-                MessageBox.Show("Omanik nimetus on kohustuslik");
-                return;
-            }
-            var uus = new Owner
-            {
-                FullName = oma_nimi_txt.Text,
-                Phone = oma_tel_txt.Text
-            };
-            _db.Omanik.Add(uus);
-            _db.SaveChanges();
-            LaeOmanik();
-            Controls.Add(dataGridView_omanik);
-            Kustuta_oma_btn.Enabled = true;
-            Kustuta_oma_btn.ForeColor = Color.White;
-        }
-        private void Vaata_Click(object sender, EventArgs e)
-        {
-            Kustuta_oma_btn.Enabled = true;
-            Kustuta_oma_btn.ForeColor = Color.White;
-
-            Controls.Add(dataGridView_omanik);
-        }
-        private void Kustuta_Click(object sender, EventArgs e)
-        {
-            if (dataGridView_omanik.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Palun valige kasutatav omanik.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            string omanikNimetus = dataGridView_omanik.SelectedRows[0].Cells["FullName"].Value?.ToString() ?? "valitud omanik";
-            DialogResult vastus = MessageBox.Show(
-                $"Kas olete kindel, et soovite kustuta omanik: {omanikNimetus}?",
-                "Kustutamise kinnitus",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-                );
-            if (vastus == DialogResult.Yes)
-            {
-                try
-                {
-                    int id = (int)dataGridView_omanik.SelectedRows[0].Cells["Id"].Value;
-                    var omanik = _db.Omanik.Find(id);
-
-                    if (omanik != null)
-                    {
-                        _db.Omanik.Remove(omanik);
-                        _db.SaveChanges();
-                        LaeOmanik();
-                        //puhasta_oma_Click;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Kustutamisel tekkis viga: {ex.Message}", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-        private void puhasta_oma_Click(object sender, EventArgs e)
-        {
-            oma_nimi_txt.Clear();
-            oma_tel_txt.Clear();
-        }
-        ///
-        /// Auto
-        ///
         private void LaeAutod()
         {
             dataGridView_autod.DataSource = _db.Auto.Include(a => a.Owner).Select(a => new
@@ -171,95 +48,288 @@ namespace Autod
             OmaId_auto_cb.DisplayMember = "FullName";
             OmaId_auto_cb.ValueMember = "Id";
         }
-        private void Vaata_auto_btn_Click(object sender, EventArgs e)
+        private void Lisa_btn_Click(object sender, EventArgs e)
         {
-            Kust_auto_btm.Enabled = true;
-            Kust_auto_btm.ForeColor = Color.White;
-
-            Controls.Add(dataGridView_autod);
-        }
-        private void Lisavorm_auto_btn_Click(object sender, EventArgs e)
-        {
-            Controls.Add(brand_auto_txt);
-            Controls.Add(mudel_auto_txt);
-            Controls.Add(RN_auto_txt);
-            Controls.Add(OmaId_auto_cb);
-            Controls.Add(Brand_auto_lbl);
-            Controls.Add(OmaId_auto_lbl);
-            Controls.Add(RN_auto_lbl);
-            Controls.Add(Mudel_auto_lbl);
-            Controls.Add(Autod_lbl);
-            Controls.Add(lisa_auto_btn);
-            Controls.Add(puhasta_auto_btn);
-        }
-        private void Kust_auto_btm_Click(object sender, EventArgs e)
-        {
-            if (dataGridView_autod.SelectedRows.Count == 0)
+            if (tabC.SelectedTab == Omanik)
             {
-                MessageBox.Show("Palun valige kasutatav auto.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            string autodNimetus = dataGridView_autod.SelectedRows[0].Cells["Brand"].Value?.ToString() ?? "valitud omanik";
-            DialogResult vastus = MessageBox.Show(
-                $"Kas olete kindel, et soovite kustuta auto: {autodNimetus}?",
-                "Kustutamise kinnitus",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-                );
-            if (vastus == DialogResult.Yes)
-            {
-
-                try
+                if (string.IsNullOrWhiteSpace(oma_nimi_txt.Text))
                 {
-                    int id = (int)dataGridView_autod.SelectedRows[0].Cells["Id"].Value;
-                    var auto = _db.Auto.Find(id);
+                    MessageBox.Show("Omanik nimetus on kohustuslik");
+                    return;
+                }
+                var uus = new Owner
+                {
+                    FullName = oma_nimi_txt.Text,
+                    Phone = oma_tel_txt.Text
+                };
+                _db.Omanik.Add(uus);
+                _db.SaveChanges();
+                LaeOmanik();
+                Kustuta_btn.ForeColor = Color.White;
+                oma_nimi_txt.Clear();
+                oma_tel_txt.Clear();
+            }
+            else if (tabC.SelectedTab == Autod)
+            {
+                if (string.IsNullOrWhiteSpace(brand_auto_txt.Text))
+                {
+                    MessageBox.Show("Auto nimetus on kohustuslik");
+                    return;
+                }
+                var uus = new Car
+                {
+                    Brand = brand_auto_txt.Text,
+                    Model = mudel_auto_txt.Text,
+                    RegistrationNumber = RN_auto_txt.Text,
+                    OwnerId = (int)OmaId_auto_cb.SelectedValue
+                };
+                _db.Auto.Add(uus);
+                _db.SaveChanges();
+                LaeAutod();
 
-                    if (auto != null)
+                brand_auto_txt.Clear();
+                mudel_auto_txt.Clear();
+                RN_auto_txt.Clear();
+                OmaId_auto_cb = null;
+            }
+            else if (tabC.SelectedTab == HjT)
+            {
+                if (auto_com_box.SelectedValue == null)
+                {
+                    MessageBox.Show("Valige auto!");
+                    return;
+                }
+                if (teenus_com_box.SelectedValue == null)
+                {
+                    MessageBox.Show("Valige teenus!");
+                    return;
+                }
+                if (!DateTime.TryParse(kuup_txt_box.Text, out DateTime kuup) || !int.TryParse(aeg_txt_box.Text, out int aeg))
+                {
+                    MessageBox.Show("Kuupäev või läbisõit on valesformaadis!");
+                    return;
+                }
+                var uus2 = new CarService
+                {
+                    CarId = (int)auto_com_box.SelectedValue,
+                    ServiceId = (int)teenus_com_box.SelectedValue,
+                    DateOfService = kuup,
+                    Mileage = aeg
+                };
+                _db.CarServices.Add(uus2);
+                _db.SaveChanges();
+                LoeCarServices();
+                puhasta();
+            }
+        }
+        private void Kustuta_Click(object sender, EventArgs e)
+        {
+            if (tabC.SelectedTab == Omanik)
+            {
+                if (dataGridView_omanik.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Palun valige kasutatav omanik.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string omanikNimetus = dataGridView_omanik.SelectedRows[0].Cells["FullName"].Value?.ToString() ?? "valitud omanik";
+                DialogResult vastus = MessageBox.Show(
+                    $"Kas olete kindel, et soovite kustuta omanik: {omanikNimetus}?",
+                    "Kustutamise kinnitus",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                    );
+                if (vastus == DialogResult.Yes)
+                {
+                    try
                     {
-                        _db.Auto.Remove(auto);
-                        _db.SaveChanges();
-                        LaeAutod();
-                        //puhasta_oma_Click;
+                        int id = (int)dataGridView_omanik.SelectedRows[0].Cells["Id"].Value;
+                        var omanik = _db.Omanik.Find(id);
+
+                        if (omanik != null)
+                        {
+                            _db.Omanik.Remove(omanik);
+                            _db.SaveChanges();
+                            LaeOmanik();
+                            //puhasta_oma_Click;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Kustutamisel tekkis viga: {ex.Message}", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch (Exception ex)
+            }
+            else if (tabC.SelectedTab == Autod)
+            {
+                if (dataGridView_autod.SelectedRows.Count == 0)
                 {
-                    MessageBox.Show($"Kustutamisel tekkis viga: {ex.Message}", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Palun valige kasutatav auto.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string autodNimetus = dataGridView_autod.SelectedRows[0].Cells["Brand"].Value?.ToString() ?? "valitud omanik";
+                DialogResult vastus = MessageBox.Show(
+                    $"Kas olete kindel, et soovite kustuta auto: {autodNimetus}?",
+                    "Kustutamise kinnitus",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                    );
+                if (vastus == DialogResult.Yes)
+                {
+
+                    try
+                    {
+                        int id = (int)dataGridView_autod.SelectedRows[0].Cells["Id"].Value;
+                        var auto = _db.Auto.Find(id);
+
+                        if (auto != null)
+                        {
+                            _db.Auto.Remove(auto);
+                            _db.SaveChanges();
+                            LaeAutod();
+                            //puhasta_oma_Click;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Kustutamisel tekkis viga: {ex.Message}", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else if (tabC.SelectedTab == HjT)
+            {
+                if (hooldus_data.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Palun valige kustutatav hooldus.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string hool = hooldus_data.SelectedRows[0].Cells["CarId"].Value?.ToString() ?? "valitud auto";
+                DialogResult vastus = MessageBox.Show(
+                    $"Kas olete kindel, et soovite kustutada: {hool}?",
+                    "Kustutamise kinnitus",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+                if (vastus == DialogResult.Yes)
+                {
+                    try
+                    {
+                        int id = (int)hooldus_data.SelectedRows[0].Cells["Id"].Value;
+                        var car1 = _db.CarServices.Find(id);
+
+                        if (car1 != null)
+                        {
+                            _db.CarServices.Remove(car1);
+                            _db.SaveChanges();
+                            LoeCarServices();
+                            puhasta();
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Kustutamisel tekkis viga: {ex.Message}", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
-        private void puhasta_auto_Click(object sender, EventArgs e)
+        }
+        private void uue_btn_Click(object sender, EventArgs e)
         {
-            brand_auto_txt.Clear();
-            mudel_auto_txt.Clear();
-            RN_auto_txt.Clear();
-            OmaId_auto_cb = null;
+            if (tabC.SelectedTab == Omanik)
+            {
+
+                int id = (int)dataGridView_omanik.SelectedRows[0].Cells["Id"].Value;
+
+                var omanik = _db.Omanik.Find(id);
+
+                omanik.FullName = oma_nimi_txt.Text;
+                omanik.Phone = oma_tel_txt.Text;
+                if (string.IsNullOrWhiteSpace(oma_nimi_txt.Text))
+                {
+                    MessageBox.Show("Omanik nimetus on kohustuslik");
+                    return;
+                }
+                _db.SaveChanges();
+                LaeOmanik();
+            }
+            else if (tabC.SelectedTab == Autod)
+            {
+                int id = (int)dataGridView_autod.SelectedRows[0].Cells["Id"].Value;
+
+                var auto = _db.Auto.Find(id);
+
+                auto.Brand = brand_auto_txt.Text;
+                auto.Model = mudel_auto_txt.Text;
+                auto.RegistrationNumber = RN_auto_txt.Text;
+                auto.OwnerId = (int)OmaId_auto_cb.SelectedValue;
+                if (string.IsNullOrWhiteSpace(brand_auto_txt.Text))
+                {
+                    MessageBox.Show("Auto nimetus on kohustuslik");
+                    return;
+                }
+                _db.SaveChanges();
+                LaeAutod();
+            }
+            else if (tabC.SelectedTab == HjT)
+            {
+                if (hooldus_data.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Palun valige auto!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                int oldCarId = (int)hooldus_data.SelectedRows[0].Cells["CarId"].Value;
+                int oldServiceId = (int)hooldus_data.SelectedRows[0].Cells["ServiceId"].Value;
+                DateTime oldDate = (DateTime)hooldus_data.SelectedRows[0].Cells["DateOfService"].Value;
+                var oldEntry = _db.CarServices.Find(oldCarId, oldServiceId, oldDate);
+                if (oldEntry == null)
+                {
+                    MessageBox.Show("Kirjet ei leitud!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (auto_com_box.SelectedValue == null)
+                {
+                    MessageBox.Show("Valige auto!");
+                    return;
+                }
+                if (teenus_com_box.SelectedValue == null)
+                {
+                    MessageBox.Show("Valige teenus!");
+                    return;
+                }
+                if (!DateTime.TryParse(kuup_txt_box.Text, out DateTime newDate))
+                {
+                    MessageBox.Show("Kuupäev on vales formaadis!");
+                    return;
+                }
+                if (!int.TryParse(aeg_txt_box.Text, out int newMileage))
+                {
+                    MessageBox.Show("Läbisõit peab olema arv!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                _db.CarServices.Remove(oldEntry);
+                _db.SaveChanges();
+                var newEntry = new CarService
+                {
+                    CarId = (int)auto_com_box.SelectedValue,
+                    ServiceId = (int)teenus_com_box.SelectedValue,
+                    DateOfService = newDate,
+                    Mileage = newMileage
+                };
+                _db.CarServices.Add(newEntry);
+                _db.SaveChanges();
+                LoeCarServices();
+                puhasta();
+            }
+
+
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
         }
 
-        private void Lisa_auto_Click(object sender, EventArgs e)
+        private void tenus_vaata_btn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(brand_auto_txt.Text))
-            {
-                MessageBox.Show("Auto nimetus on kohustuslik");
-                return;
-            }
-            var uus = new Car
-            {
-                Brand = brand_auto_txt.Text,
-                Model = mudel_auto_txt.Text,
-                RegistrationNumber = RN_auto_txt.Text,
-                OwnerId = (int)OmaId_auto_cb.SelectedValue
-            };
-            _db.Auto.Add(uus);
-            _db.SaveChanges();
-            LaeOmanik();
-            Controls.Add(dataGridView_autod);
-            Kustuta_oma_btn.Enabled = true;
-            Kustuta_oma_btn.ForeColor = Color.White;
+            this.Size = new Size(1224, 743);
+            Kustuta_btn.Size = new Size(180, 68);
         }
-        
-        ///
-        /// HjT
-        ///
     }
 }
