@@ -630,6 +630,7 @@
             //
             // Otsi_ch_btn
             //
+
             Otsi_ch_btn.BackColor = Color.Gray;
             Otsi_ch_btn.ForeColor = SystemColors.ControlLight;
             Otsi_ch_btn.Location = new Point(448, 496);
