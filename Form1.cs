@@ -376,6 +376,7 @@ namespace Autod
             Kustuta_btn.ForeColor = Color.White;
             puhasta();
         }
+
         private void Kustuta_ch_Click(object sender, EventArgs e)
         {
             if (dataGridView_omanik.SelectedRows.Count == 0)
