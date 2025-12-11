@@ -75,7 +75,7 @@
             ten_cl_btn = new Button();
             keel_cb = new ComboBox();
             nim_teen_txt = new TextBox();
-            hind_teen_txt = new NumericUpDown();
+            hind_teen_txt = new TextBox();
             change_btn = new Button();
             otsi_teen_txt = new TextBox();
             Kustuta_ch_btn = new Button();
@@ -458,6 +458,7 @@
             Otsi_btn.TabIndex = 3;
             Otsi_btn.Text = "Otsi";
             Otsi_btn.UseVisualStyleBackColor = false;
+            Otsi_btn.Click += otsi_btn_Click;
             // 
             // Kustuta_btn
             // 
@@ -572,6 +573,7 @@
             change_btn.TabIndex = 13;
             change_btn.Text = "⇄";
             change_btn.UseVisualStyleBackColor = false;
+            change_btn.Click += Change_btn_Click;
             // 
             // change_ch_btn
             // 
@@ -582,8 +584,9 @@
             change_ch_btn.Name = "change_ch_btn";
             change_ch_btn.Size = new Size(63, 26);
             change_ch_btn.TabIndex = 13;
-            change_ch_btn.Text = "⇄";
+            change_ch_btn.Text = "⇄_";
             change_ch_btn.UseVisualStyleBackColor = false;
+            change_ch_btn.Click += change_ch_btn_Click;
             // 
             // otsi_teen_txt
             // 
@@ -600,9 +603,9 @@
             Kustuta_ch_btn.Name = "Kustuta_ch_btn";
             Kustuta_ch_btn.Size = new Size(140, 51);
             Kustuta_ch_btn.TabIndex = 2;
-            Kustuta_ch_btn.Text = "Kustuta";
+            Kustuta_ch_btn.Text = "Kustuta_";
             Kustuta_ch_btn.UseVisualStyleBackColor = false;
-            Kustuta_ch_btn.Click += Kustuta_Click;
+            Kustuta_ch_btn.Click += Kustuta_ch_Click;
             //
             // Lisa_ch_btn
             //
@@ -612,9 +615,9 @@
             Lisa_ch_btn.Name = "Lisa_ch_btn";
             Lisa_ch_btn.Size = new Size(140, 51);
             Lisa_ch_btn.TabIndex = 1;
-            Lisa_ch_btn.Text = "Lisa";
+            Lisa_ch_btn.Text = "Lisa_";
             Lisa_ch_btn.UseVisualStyleBackColor = false;
-            Lisa_ch_btn.Click += Lisa_btn_Click;
+            Lisa_ch_btn.Click += Lisa_ch_btn_Click;
             //
             // uue_ch_btn
             //
@@ -624,9 +627,9 @@
             uue_ch_btn.Name = "uue_ch_btn";
             uue_ch_btn.Size = new Size(140, 51);
             uue_ch_btn.TabIndex = 4;
-            uue_ch_btn.Text = "Uuenda";
+            uue_ch_btn.Text = "Uuenda_";
             uue_ch_btn.UseVisualStyleBackColor = false;
-            uue_ch_btn.Click += uue_btn_Click;
+            uue_ch_btn.Click += uue_ch_btn_Click;
             //
             // Otsi_ch_btn
             //
@@ -637,8 +640,9 @@
             Otsi_ch_btn.Name = "Otsi_ch_btn";
             Otsi_ch_btn.Size = new Size(140, 51);
             Otsi_ch_btn.TabIndex = 3;
-            Otsi_ch_btn.Text = "Otsi";
+            Otsi_ch_btn.Text = "Otsi_";
             Otsi_ch_btn.UseVisualStyleBackColor = false;
+            Otsi_ch_btn.Click += otsi_ch_btn_Click;
             // 
             // Form1
             // 
@@ -713,7 +717,7 @@
         private Button ten_cl_btn;
         private ComboBox keel_cb;
         private TextBox nim_teen_txt;
-        private NumericUpDown hind_teen_txt;
+        private TextBox hind_teen_txt;
         private Button change_btn;
         private TextBox otsi_oma_txt;
         private TextBox otsi_auto_txt;
