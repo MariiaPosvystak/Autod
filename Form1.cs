@@ -729,7 +729,6 @@ namespace Autod
                 dataGridView_teen.DataSource = tulemused;
             }
         }
-
         //
         // LANG
         //
