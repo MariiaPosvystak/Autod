@@ -117,18 +117,192 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;Omanik.Name" xml:space="preserve">
+    <value>Omanik</value>
+  </data>
+  <data name="&gt;&gt;Omanik.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Omanik.Parent" xml:space="preserve">
+    <value>tabC</value>
+  </data>
+  <data name="&gt;&gt;Omanik.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Autod.Name" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;Autod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Autod.Parent" xml:space="preserve">
+    <value>tabC</value>
+  </data>
+  <data name="&gt;&gt;Autod.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;HjT.Name" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;HjT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HjT.Parent" xml:space="preserve">
+    <value>tabC</value>
+  </data>
+  <data name="&gt;&gt;HjT.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tabC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 13</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabC.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="tabC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>785, 637</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabC.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabC.Name" xml:space="preserve">
+    <value>tabC</value>
+  </data>
+  <data name="&gt;&gt;tabC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabC.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;otsi_oma_txt.Name" xml:space="preserve">
+    <value>otsi_oma_txt</value>
+  </data>
+  <data name="&gt;&gt;otsi_oma_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_oma_txt.Parent" xml:space="preserve">
+    <value>Omanik</value>
+  </data>
+  <data name="&gt;&gt;otsi_oma_txt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;name_oma_lbl.Name" xml:space="preserve">
+    <value>name_oma_lbl</value>
+  </data>
+  <data name="&gt;&gt;name_oma_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;name_oma_lbl.Parent" xml:space="preserve">
+    <value>Omanik</value>
+  </data>
+  <data name="&gt;&gt;name_oma_lbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;oma_tel_txt.Name" xml:space="preserve">
+    <value>oma_tel_txt</value>
+  </data>
+  <data name="&gt;&gt;oma_tel_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;oma_tel_txt.Parent" xml:space="preserve">
+    <value>Omanik</value>
+  </data>
+  <data name="&gt;&gt;oma_tel_txt.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Telefon_oma_lbl.Name" xml:space="preserve">
+    <value>Telefon_oma_lbl</value>
+  </data>
+  <data name="&gt;&gt;Telefon_oma_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Telefon_oma_lbl.Parent" xml:space="preserve">
+    <value>Omanik</value>
+  </data>
+  <data name="&gt;&gt;Telefon_oma_lbl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;oma_nimi_txt.Name" xml:space="preserve">
+    <value>oma_nimi_txt</value>
+  </data>
+  <data name="&gt;&gt;oma_nimi_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;oma_nimi_txt.Parent" xml:space="preserve">
+    <value>Omanik</value>
+  </data>
+  <data name="&gt;&gt;oma_nimi_txt.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Omanikud.Name" xml:space="preserve">
+    <value>Omanikud</value>
+  </data>
+  <data name="&gt;&gt;Omanikud.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Omanikud.Parent" xml:space="preserve">
+    <value>Omanik</value>
+  </data>
+  <data name="&gt;&gt;Omanikud.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_omanik.Name" xml:space="preserve">
+    <value>dataGridView_omanik</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_omanik.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_omanik.Parent" xml:space="preserve">
+    <value>Omanik</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_omanik.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Omanik.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="Omanik.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="Omanik.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="Omanik.Size" type="System.Drawing.Size, System.Drawing">
+    <value>777, 604</value>
+  </data>
+  <data name="Omanik.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Omanik.Text" xml:space="preserve">
+    <value>Omanikud</value>
+  </data>
+  <data name="&gt;&gt;Omanik.Name" xml:space="preserve">
+    <value>Omanik</value>
+  </data>
+  <data name="&gt;&gt;Omanik.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Omanik.Parent" xml:space="preserve">
+    <value>tabC</value>
+  </data>
+  <data name="&gt;&gt;Omanik.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="otsi_oma_txt.Location" type="System.Drawing.Point, System.Drawing">
     <value>611, 213</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="otsi_oma_txt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="otsi_oma_txt.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 27</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="otsi_oma_txt.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
@@ -300,35 +474,167 @@
   <data name="&gt;&gt;dataGridView_omanik.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="Omanik.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="&gt;&gt;otsi_auto_txt.Name" xml:space="preserve">
+    <value>otsi_auto_txt</value>
+  </data>
+  <data name="&gt;&gt;otsi_auto_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_auto_txt.Parent" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;otsi_auto_txt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;brand_auto_txt.Name" xml:space="preserve">
+    <value>brand_auto_txt</value>
+  </data>
+  <data name="&gt;&gt;brand_auto_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;brand_auto_txt.Parent" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;brand_auto_txt.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;mudel_auto_txt.Name" xml:space="preserve">
+    <value>mudel_auto_txt</value>
+  </data>
+  <data name="&gt;&gt;mudel_auto_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mudel_auto_txt.Parent" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;mudel_auto_txt.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RN_auto_txt.Name" xml:space="preserve">
+    <value>RN_auto_txt</value>
+  </data>
+  <data name="&gt;&gt;RN_auto_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RN_auto_txt.Parent" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;RN_auto_txt.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;OmaId_auto_cb.Name" xml:space="preserve">
+    <value>OmaId_auto_cb</value>
+  </data>
+  <data name="&gt;&gt;OmaId_auto_cb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OmaId_auto_cb.Parent" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;OmaId_auto_cb.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Brand_auto_lbl.Name" xml:space="preserve">
+    <value>Brand_auto_lbl</value>
+  </data>
+  <data name="&gt;&gt;Brand_auto_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Brand_auto_lbl.Parent" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;Brand_auto_lbl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;OmaId_auto_lbl.Name" xml:space="preserve">
+    <value>OmaId_auto_lbl</value>
+  </data>
+  <data name="&gt;&gt;OmaId_auto_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OmaId_auto_lbl.Parent" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;OmaId_auto_lbl.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;RN_auto_lbl.Name" xml:space="preserve">
+    <value>RN_auto_lbl</value>
+  </data>
+  <data name="&gt;&gt;RN_auto_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RN_auto_lbl.Parent" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;RN_auto_lbl.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Mudel_auto_lbl.Name" xml:space="preserve">
+    <value>Mudel_auto_lbl</value>
+  </data>
+  <data name="&gt;&gt;Mudel_auto_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mudel_auto_lbl.Parent" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;Mudel_auto_lbl.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;Autod_lbl.Name" xml:space="preserve">
+    <value>Autod_lbl</value>
+  </data>
+  <data name="&gt;&gt;Autod_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Autod_lbl.Parent" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;Autod_lbl.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_autod.Name" xml:space="preserve">
+    <value>dataGridView_autod</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_autod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_autod.Parent" xml:space="preserve">
+    <value>Autod</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_autod.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="Autod.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
   </data>
-  <data name="Omanik.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="Autod.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="Omanik.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="Autod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="Omanik.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Autod.Size" type="System.Drawing.Size, System.Drawing">
     <value>777, 604</value>
   </data>
-  <data name="Omanik.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="Autod.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="Omanik.Text" xml:space="preserve">
-    <value>Omanikud</value>
+  <data name="Autod.Text" xml:space="preserve">
+    <value>Autod</value>
   </data>
-  <data name="&gt;&gt;Omanik.Name" xml:space="preserve">
-    <value>Omanik</value>
+  <data name="&gt;&gt;Autod.Name" xml:space="preserve">
+    <value>Autod</value>
   </data>
-  <data name="&gt;&gt;Omanik.Type" xml:space="preserve">
+  <data name="&gt;&gt;Autod.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Omanik.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Autod.Parent" xml:space="preserve">
     <value>tabC</value>
   </data>
-  <data name="&gt;&gt;Omanik.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;Autod.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="otsi_auto_txt.Location" type="System.Drawing.Point, System.Drawing">
     <value>609, 228</value>
@@ -615,35 +921,176 @@
   <data name="&gt;&gt;dataGridView_autod.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="Autod.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="&gt;&gt;otsi_hold_txt.Name" xml:space="preserve">
+    <value>otsi_hold_txt</value>
+  </data>
+  <data name="&gt;&gt;otsi_hold_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otsi_hold_txt.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;otsi_hold_txt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mileage_lbl.Name" xml:space="preserve">
+    <value>mileage_lbl</value>
+  </data>
+  <data name="&gt;&gt;mileage_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mileage_lbl.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;mileage_lbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;hod_kuu_lbl.Name" xml:space="preserve">
+    <value>hod_kuu_lbl</value>
+  </data>
+  <data name="&gt;&gt;hod_kuu_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hod_kuu_lbl.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;hod_kuu_lbl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;hold_ten_lbl.Name" xml:space="preserve">
+    <value>hold_ten_lbl</value>
+  </data>
+  <data name="&gt;&gt;hold_ten_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hold_ten_lbl.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;hold_ten_lbl.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;hold_auto_lbl.Name" xml:space="preserve">
+    <value>hold_auto_lbl</value>
+  </data>
+  <data name="&gt;&gt;hold_auto_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hold_auto_lbl.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;hold_auto_lbl.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;mileage_txt.Name" xml:space="preserve">
+    <value>mileage_txt</value>
+  </data>
+  <data name="&gt;&gt;mileage_txt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mileage_txt.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;mileage_txt.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tenus_vaata_btn.Name" xml:space="preserve">
+    <value>tenus_vaata_btn</value>
+  </data>
+  <data name="&gt;&gt;tenus_vaata_btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tenus_vaata_btn.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;tenus_vaata_btn.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;hold_auto_cb.Name" xml:space="preserve">
+    <value>hold_auto_cb</value>
+  </data>
+  <data name="&gt;&gt;hold_auto_cb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hold_auto_cb.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;hold_auto_cb.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;teenus_cb.Name" xml:space="preserve">
+    <value>teenus_cb</value>
+  </data>
+  <data name="&gt;&gt;teenus_cb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;teenus_cb.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;teenus_cb.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;hodl_datetime.Name" xml:space="preserve">
+    <value>hodl_datetime</value>
+  </data>
+  <data name="&gt;&gt;hodl_datetime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hodl_datetime.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;hodl_datetime.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_hold.Name" xml:space="preserve">
+    <value>dataGridView_hold</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_hold.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_hold.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;dataGridView_hold.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;Holdus_lbl.Name" xml:space="preserve">
+    <value>Holdus_lbl</value>
+  </data>
+  <data name="&gt;&gt;Holdus_lbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Holdus_lbl.Parent" xml:space="preserve">
+    <value>HjT</value>
+  </data>
+  <data name="&gt;&gt;Holdus_lbl.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="HjT.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
   </data>
-  <data name="Autod.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="HjT.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
-  <data name="Autod.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="Autod.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HjT.Size" type="System.Drawing.Size, System.Drawing">
     <value>777, 604</value>
   </data>
-  <data name="Autod.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="HjT.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="Autod.Text" xml:space="preserve">
-    <value>Autod</value>
+  <data name="HjT.Text" xml:space="preserve">
+    <value>Hooldus ja Teenused</value>
   </data>
-  <data name="&gt;&gt;Autod.Name" xml:space="preserve">
-    <value>Autod</value>
+  <data name="&gt;&gt;HjT.Name" xml:space="preserve">
+    <value>HjT</value>
   </data>
-  <data name="&gt;&gt;Autod.Type" xml:space="preserve">
+  <data name="&gt;&gt;HjT.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Autod.Parent" xml:space="preserve">
+  <data name="&gt;&gt;HjT.Parent" xml:space="preserve">
     <value>tabC</value>
   </data>
-  <data name="&gt;&gt;Autod.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;HjT.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="otsi_hold_txt.Location" type="System.Drawing.Point, System.Drawing">
     <value>611, 265</value>
@@ -944,57 +1391,6 @@
   </data>
   <data name="&gt;&gt;Holdus_lbl.ZOrder" xml:space="preserve">
     <value>11</value>
-  </data>
-  <data name="HjT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
-  </data>
-  <data name="HjT.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="HjT.Size" type="System.Drawing.Size, System.Drawing">
-    <value>777, 604</value>
-  </data>
-  <data name="HjT.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="HjT.Text" xml:space="preserve">
-    <value>Hooldus ja Teenused</value>
-  </data>
-  <data name="&gt;&gt;HjT.Name" xml:space="preserve">
-    <value>HjT</value>
-  </data>
-  <data name="&gt;&gt;HjT.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HjT.Parent" xml:space="preserve">
-    <value>tabC</value>
-  </data>
-  <data name="&gt;&gt;HjT.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 13</value>
-  </data>
-  <data name="tabC.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="tabC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>785, 637</value>
-  </data>
-  <data name="tabC.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabC.Name" xml:space="preserve">
-    <value>tabC</value>
-  </data>
-  <data name="&gt;&gt;tabC.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabC.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabC.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="uue_btn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Ravie, 14.25pt, style=Bold</value>
@@ -1434,6 +1830,9 @@
   <data name="&gt;&gt;change_ch_btn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>en</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
