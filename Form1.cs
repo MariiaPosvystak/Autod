@@ -17,6 +17,7 @@ namespace Autod
         private readonly AutoDbContext _db;
         public Form1()
         {
+            this.Size = new Size(826, 787);
             _db = new AutoDbContext();
             InitializeComponent();
             LaeOmanik();
@@ -36,7 +37,7 @@ namespace Autod
         }
         private void tabC_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(678, 596);
+            this.Size = new Size(826, 787);
             Controls.Remove(otsi_teen_txt);
             Controls.Remove(hind_teen_txt);
             Controls.Remove(nim_teen_txt);
@@ -220,7 +221,6 @@ namespace Autod
                 LaeHooldus();
                 puhasta();
             }
-
         }
         private void Kustuta_Click(object sender, EventArgs e)
         {
@@ -549,7 +549,7 @@ namespace Autod
         //
         private void tenus_vaata_btn_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(1080, 596);
+            this.Size = new Size(1300, 787);
             Controls.Add(otsi_teen_txt);
             Controls.Add(hind_teen_txt);
             Controls.Add(nim_teen_txt);
@@ -562,7 +562,7 @@ namespace Autod
         }
         private void tenus_kinni_btn_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(678, 596);
+            this.Size = new Size(826, 787);
             Controls.Remove(otsi_teen_txt);
             Controls.Remove(hind_teen_txt);
             Controls.Remove(nim_teen_txt);
@@ -622,9 +622,6 @@ namespace Autod
             LaeAutod();
             LaeTeenus();
             LaeHooldus();
-            LaeOmanikId();
-            LaeAutodId();
-            LaeTeenusId();
         }
         //
         // TEENUS_IUDS
