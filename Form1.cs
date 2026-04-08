@@ -13,7 +13,7 @@ namespace Autod
         // 
         // FORM
         // 
-        //bool _keelLaetud;
+        bool _keelLaetud;
         private readonly AutoDbContext _db;
         public Form1()
         {
@@ -34,6 +34,19 @@ namespace Autod
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            _keelLaetud = false;
+
+            keel_cb.Items.Clear();
+            keel_cb.Items.Add("Eesti");
+            keel_cb.Items.Add("English");
+            keel_cb.SelectedItem = "Eesti";     
+            string lang = Autod.Properties.Settings.Default.UserLanguage;
+
+            if (lang == "en-US")
+                keel_cb.SelectedItem = "English";
+            else
+                keel_cb.SelectedItem = "Eesti";
+            _keelLaetud = true;
         }
         private void tabC_Click(object sender, EventArgs e)
         {
@@ -730,33 +743,33 @@ namespace Autod
         // LANG
         //
 
-        //private void ChangeLanguage(string lang)
-        //{
-        //    Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
-        //    Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
-        //    var res = new ComponentResourceManager(typeof(Pood));
-        //    ApplyResourcesToControl(this, res);
-        //    res.ApplyResources(this, "$this");
-        //    Properties.Settings.Default.UserLanguage = lang;
-        //    Properties.Settings.Default.Save();
+        private void ChangeLanguage(string lang)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
+            var res = new ComponentResourceManager(typeof(Form1));
+            ApplyResourcesToControl(this, res);
+            res.ApplyResources(this, "$this");
+            Properties.Settings.Default.UserLanguage = lang;
+            Properties.Settings.Default.Save();
 
-        //}
-        //private void ApplyResourcesToControl(Control ctrl, ComponentResourceManager res)
-        //{
-        //    res.ApplyResources(ctrl, ctrl.Name);
-        //    foreach (Control child in ctrl.Controls)
-        //    {
-        //        ApplyResourcesToControl(child, res);
-        //    }
-        //}
-        //private void keel_cb_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if (!_keelLaetud)
-        //        return;
-        //    if (keel_cb.SelectedItem?.ToString() == "English")
-        //        ChangeLanguage("en-GB");
-        //    else
-        //        ChangeLanguage("et-EE");
-        //}
+        }
+        private void ApplyResourcesToControl(Control ctrl, ComponentResourceManager res)
+        {
+            res.ApplyResources(ctrl, ctrl.Name);
+            foreach (Control child in ctrl.Controls)
+            {
+                ApplyResourcesToControl(child, res);
+            }
+        }
+        private void keel_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!_keelLaetud)
+                return;
+            if (keel_cb.SelectedItem?.ToString() == "English")
+                ChangeLanguage("en-US");
+            else
+                ChangeLanguage("et-EE");
+        }
     }
 }

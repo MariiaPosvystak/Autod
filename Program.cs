@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Threading;
 
 namespace Autod
 {
@@ -10,22 +11,14 @@ namespace Autod
         [STAThread]
         static void Main()
         {
-            //string lang = Properties.Settings.Default.UserLanguage;
-            //if (string.IsNullOrEmpty(lang))
-            //{
-            //    lang = "et-EE";
-            //}
-            //try
-            //{
-            //    Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
-            //    Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
-            //}
-            //catch (CultureNotFoundException)
-            //{
-            //    Thread.CurrentThread.CurrentUICulture = new CultureInfo("et-EE");
-            //    Thread.CurrentThread.CurrentCulture = new CultureInfo("et-EE");
-            //}
-            // To customize application configuration such as set high DPI settings or default font,
+            string lang = Properties.Settings.Default.UserLanguage;
+
+            if (string.IsNullOrWhiteSpace(lang))
+                lang = "et-EE"; // vaikimisi
+
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(lang);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
+            //To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
