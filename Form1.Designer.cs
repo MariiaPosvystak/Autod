@@ -94,16 +94,17 @@
             // 
             // tabC
             // 
+            resources.ApplyResources(tabC, "tabC");
             tabC.Controls.Add(Omanik);
             tabC.Controls.Add(Autod);
             tabC.Controls.Add(HjT);
-            resources.ApplyResources(tabC, "tabC");
             tabC.Name = "tabC";
             tabC.SelectedIndex = 0;
             tabC.Click += tabC_Click;
             // 
             // Omanik
             // 
+            resources.ApplyResources(Omanik, "Omanik");
             Omanik.BackColor = Color.FromArgb(110, 0, 0);
             Omanik.Controls.Add(otsi_oma_txt);
             Omanik.Controls.Add(name_oma_lbl);
@@ -113,14 +114,13 @@
             Omanik.Controls.Add(Omanikud);
             Omanik.Controls.Add(dataGridView_omanik);
             Omanik.ForeColor = Color.Wheat;
-            resources.ApplyResources(Omanik, "Omanik");
             Omanik.Name = "Omanik";
             // 
             // otsi_oma_txt
             // 
+            resources.ApplyResources(otsi_oma_txt, "otsi_oma_txt");
             otsi_oma_txt.BackColor = Color.FloralWhite;
             otsi_oma_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(otsi_oma_txt, "otsi_oma_txt");
             otsi_oma_txt.Name = "otsi_oma_txt";
             // 
             // name_oma_lbl
@@ -131,9 +131,9 @@
             // 
             // oma_tel_txt
             // 
+            resources.ApplyResources(oma_tel_txt, "oma_tel_txt");
             oma_tel_txt.BackColor = Color.FloralWhite;
             oma_tel_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(oma_tel_txt, "oma_tel_txt");
             oma_tel_txt.Name = "oma_tel_txt";
             // 
             // Telefon_oma_lbl
@@ -144,9 +144,9 @@
             // 
             // oma_nimi_txt
             // 
+            resources.ApplyResources(oma_nimi_txt, "oma_nimi_txt");
             oma_nimi_txt.BackColor = Color.FloralWhite;
             oma_nimi_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(oma_nimi_txt, "oma_nimi_txt");
             oma_nimi_txt.Name = "oma_nimi_txt";
             // 
             // Omanikud
@@ -158,14 +158,15 @@
             // 
             // dataGridView_omanik
             // 
+            resources.ApplyResources(dataGridView_omanik, "dataGridView_omanik");
             dataGridView_omanik.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView_omanik.BackgroundColor = Color.FloralWhite;
             dataGridView_omanik.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(dataGridView_omanik, "dataGridView_omanik");
             dataGridView_omanik.Name = "dataGridView_omanik";
             // 
             // Autod
             // 
+            resources.ApplyResources(Autod, "Autod");
             Autod.BackColor = Color.FromArgb(110, 0, 0);
             Autod.Controls.Add(otsi_auto_txt);
             Autod.Controls.Add(brand_auto_txt);
@@ -178,43 +179,42 @@
             Autod.Controls.Add(Mudel_auto_lbl);
             Autod.Controls.Add(Autod_lbl);
             Autod.Controls.Add(dataGridView_autod);
-            resources.ApplyResources(Autod, "Autod");
             Autod.Name = "Autod";
             // 
             // otsi_auto_txt
             // 
+            resources.ApplyResources(otsi_auto_txt, "otsi_auto_txt");
             otsi_auto_txt.BackColor = Color.FloralWhite;
             otsi_auto_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(otsi_auto_txt, "otsi_auto_txt");
             otsi_auto_txt.Name = "otsi_auto_txt";
             // 
             // brand_auto_txt
             // 
+            resources.ApplyResources(brand_auto_txt, "brand_auto_txt");
             brand_auto_txt.BackColor = Color.FloralWhite;
             brand_auto_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(brand_auto_txt, "brand_auto_txt");
             brand_auto_txt.Name = "brand_auto_txt";
             // 
             // mudel_auto_txt
             // 
+            resources.ApplyResources(mudel_auto_txt, "mudel_auto_txt");
             mudel_auto_txt.BackColor = Color.FloralWhite;
             mudel_auto_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(mudel_auto_txt, "mudel_auto_txt");
             mudel_auto_txt.Name = "mudel_auto_txt";
             // 
             // RN_auto_txt
             // 
+            resources.ApplyResources(RN_auto_txt, "RN_auto_txt");
             RN_auto_txt.BackColor = Color.FloralWhite;
             RN_auto_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(RN_auto_txt, "RN_auto_txt");
             RN_auto_txt.Name = "RN_auto_txt";
             // 
             // OmaId_auto_cb
             // 
+            resources.ApplyResources(OmaId_auto_cb, "OmaId_auto_cb");
             OmaId_auto_cb.BackColor = Color.FloralWhite;
             OmaId_auto_cb.ForeColor = Color.FromArgb(110, 0, 0);
             OmaId_auto_cb.FormattingEnabled = true;
-            resources.ApplyResources(OmaId_auto_cb, "OmaId_auto_cb");
             OmaId_auto_cb.Name = "OmaId_auto_cb";
             // 
             // Brand_auto_lbl
@@ -244,14 +244,15 @@
             // 
             // dataGridView_autod
             // 
+            resources.ApplyResources(dataGridView_autod, "dataGridView_autod");
             dataGridView_autod.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView_autod.BackgroundColor = Color.FromArgb(240, 235, 225);
             dataGridView_autod.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(dataGridView_autod, "dataGridView_autod");
             dataGridView_autod.Name = "dataGridView_autod";
             // 
             // HjT
             // 
+            resources.ApplyResources(HjT, "HjT");
             HjT.BackColor = Color.FromArgb(110, 0, 0);
             HjT.Controls.Add(otsi_hold_txt);
             HjT.Controls.Add(mileage_lbl);
@@ -265,14 +266,13 @@
             HjT.Controls.Add(hodl_datetime);
             HjT.Controls.Add(dataGridView_hold);
             HjT.Controls.Add(Holdus_lbl);
-            resources.ApplyResources(HjT, "HjT");
             HjT.Name = "HjT";
             // 
             // otsi_hold_txt
             // 
+            resources.ApplyResources(otsi_hold_txt, "otsi_hold_txt");
             otsi_hold_txt.BackColor = Color.FloralWhite;
             otsi_hold_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(otsi_hold_txt, "otsi_hold_txt");
             otsi_hold_txt.Name = "otsi_hold_txt";
             // 
             // mileage_lbl
@@ -297,15 +297,15 @@
             // 
             // mileage_txt
             // 
+            resources.ApplyResources(mileage_txt, "mileage_txt");
             mileage_txt.BackColor = Color.FloralWhite;
             mileage_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(mileage_txt, "mileage_txt");
             mileage_txt.Name = "mileage_txt";
             // 
             // tenus_vaata_btn
             // 
-            tenus_vaata_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(tenus_vaata_btn, "tenus_vaata_btn");
+            tenus_vaata_btn.BackColor = Color.FloralWhite;
             tenus_vaata_btn.ForeColor = Color.FromArgb(110, 0, 0);
             tenus_vaata_btn.Name = "tenus_vaata_btn";
             tenus_vaata_btn.UseVisualStyleBackColor = false;
@@ -313,38 +313,38 @@
             // 
             // hold_auto_cb
             // 
+            resources.ApplyResources(hold_auto_cb, "hold_auto_cb");
             hold_auto_cb.BackColor = Color.FloralWhite;
             hold_auto_cb.ForeColor = Color.FromArgb(110, 0, 0);
             hold_auto_cb.FormattingEnabled = true;
-            resources.ApplyResources(hold_auto_cb, "hold_auto_cb");
             hold_auto_cb.Name = "hold_auto_cb";
             // 
             // teenus_cb
             // 
+            resources.ApplyResources(teenus_cb, "teenus_cb");
             teenus_cb.BackColor = Color.FloralWhite;
             teenus_cb.ForeColor = Color.FromArgb(110, 0, 0);
             teenus_cb.FormattingEnabled = true;
-            resources.ApplyResources(teenus_cb, "teenus_cb");
             teenus_cb.Name = "teenus_cb";
             // 
             // hodl_datetime
             // 
+            resources.ApplyResources(hodl_datetime, "hodl_datetime");
             hodl_datetime.CalendarForeColor = Color.FromArgb(110, 0, 0);
             hodl_datetime.CalendarMonthBackground = Color.FloralWhite;
             hodl_datetime.CalendarTitleBackColor = Color.FloralWhite;
             hodl_datetime.CalendarTitleForeColor = Color.FromArgb(110, 0, 0);
             hodl_datetime.CalendarTrailingForeColor = Color.FromArgb(200, 0, 0);
-            resources.ApplyResources(hodl_datetime, "hodl_datetime");
             hodl_datetime.MinDate = new DateTime(2025, 12, 16, 0, 0, 0, 0);
             hodl_datetime.Name = "hodl_datetime";
             hodl_datetime.Value = new DateTime(2025, 12, 16, 12, 28, 59, 0);
             // 
             // dataGridView_hold
             // 
+            resources.ApplyResources(dataGridView_hold, "dataGridView_hold");
             dataGridView_hold.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView_hold.BackgroundColor = Color.FromArgb(240, 235, 225);
             dataGridView_hold.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(dataGridView_hold, "dataGridView_hold");
             dataGridView_hold.Name = "dataGridView_hold";
             // 
             // Holdus_lbl
@@ -354,8 +354,8 @@
             // 
             // uue_btn
             // 
-            uue_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(uue_btn, "uue_btn");
+            uue_btn.BackColor = Color.FloralWhite;
             uue_btn.ForeColor = Color.FromArgb(110, 0, 0);
             uue_btn.Name = "uue_btn";
             uue_btn.UseVisualStyleBackColor = false;
@@ -363,8 +363,8 @@
             // 
             // Otsi_btn
             // 
-            Otsi_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(Otsi_btn, "Otsi_btn");
+            Otsi_btn.BackColor = Color.FloralWhite;
             Otsi_btn.ForeColor = Color.FromArgb(110, 0, 0);
             Otsi_btn.Name = "Otsi_btn";
             Otsi_btn.UseVisualStyleBackColor = false;
@@ -372,8 +372,8 @@
             // 
             // Kustuta_btn
             // 
-            Kustuta_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(Kustuta_btn, "Kustuta_btn");
+            Kustuta_btn.BackColor = Color.FloralWhite;
             Kustuta_btn.ForeColor = Color.FromArgb(110, 0, 0);
             Kustuta_btn.Name = "Kustuta_btn";
             Kustuta_btn.UseVisualStyleBackColor = false;
@@ -381,8 +381,8 @@
             // 
             // Lisa_btn
             // 
-            Lisa_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(Lisa_btn, "Lisa_btn");
+            Lisa_btn.BackColor = Color.FloralWhite;
             Lisa_btn.ForeColor = Color.FromArgb(110, 0, 0);
             Lisa_btn.Name = "Lisa_btn";
             Lisa_btn.UseVisualStyleBackColor = false;
@@ -408,16 +408,16 @@
             // 
             // dataGridView_teen
             // 
+            resources.ApplyResources(dataGridView_teen, "dataGridView_teen");
             dataGridView_teen.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView_teen.BackgroundColor = Color.FromArgb(240, 235, 225);
             dataGridView_teen.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(dataGridView_teen, "dataGridView_teen");
             dataGridView_teen.Name = "dataGridView_teen";
             // 
             // ten_cl_btn
             // 
-            ten_cl_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(ten_cl_btn, "ten_cl_btn");
+            ten_cl_btn.BackColor = Color.FloralWhite;
             ten_cl_btn.ForeColor = Color.FromArgb(110, 0, 0);
             ten_cl_btn.Name = "ten_cl_btn";
             ten_cl_btn.UseVisualStyleBackColor = false;
@@ -425,8 +425,8 @@
             // 
             // keel_cb
             // 
-            keel_cb.BackColor = Color.FloralWhite;
             resources.ApplyResources(keel_cb, "keel_cb");
+            keel_cb.BackColor = Color.FloralWhite;
             keel_cb.ForeColor = Color.FromArgb(110, 0, 0);
             keel_cb.FormattingEnabled = true;
             keel_cb.Name = "keel_cb";
@@ -434,22 +434,22 @@
             // 
             // nim_teen_txt
             // 
+            resources.ApplyResources(nim_teen_txt, "nim_teen_txt");
             nim_teen_txt.BackColor = Color.FloralWhite;
             nim_teen_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(nim_teen_txt, "nim_teen_txt");
             nim_teen_txt.Name = "nim_teen_txt";
             // 
             // hind_teen_txt
             // 
+            resources.ApplyResources(hind_teen_txt, "hind_teen_txt");
             hind_teen_txt.BackColor = Color.FloralWhite;
             hind_teen_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(hind_teen_txt, "hind_teen_txt");
             hind_teen_txt.Name = "hind_teen_txt";
             // 
             // change_btn
             // 
-            change_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(change_btn, "change_btn");
+            change_btn.BackColor = Color.FloralWhite;
             change_btn.ForeColor = Color.FromArgb(110, 0, 0);
             change_btn.Name = "change_btn";
             change_btn.UseVisualStyleBackColor = false;
@@ -457,15 +457,15 @@
             // 
             // otsi_teen_txt
             // 
+            resources.ApplyResources(otsi_teen_txt, "otsi_teen_txt");
             otsi_teen_txt.BackColor = Color.FloralWhite;
             otsi_teen_txt.ForeColor = Color.FromArgb(110, 0, 0);
-            resources.ApplyResources(otsi_teen_txt, "otsi_teen_txt");
             otsi_teen_txt.Name = "otsi_teen_txt";
             // 
             // Kustuta_ch_btn
             // 
-            Kustuta_ch_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(Kustuta_ch_btn, "Kustuta_ch_btn");
+            Kustuta_ch_btn.BackColor = Color.FloralWhite;
             Kustuta_ch_btn.ForeColor = Color.FromArgb(110, 0, 0);
             Kustuta_ch_btn.Name = "Kustuta_ch_btn";
             Kustuta_ch_btn.UseVisualStyleBackColor = false;
@@ -473,8 +473,8 @@
             // 
             // Lisa_ch_btn
             // 
-            Lisa_ch_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(Lisa_ch_btn, "Lisa_ch_btn");
+            Lisa_ch_btn.BackColor = Color.FloralWhite;
             Lisa_ch_btn.ForeColor = Color.FromArgb(110, 0, 0);
             Lisa_ch_btn.Name = "Lisa_ch_btn";
             Lisa_ch_btn.UseVisualStyleBackColor = false;
@@ -482,8 +482,8 @@
             // 
             // uue_ch_btn
             // 
-            uue_ch_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(uue_ch_btn, "uue_ch_btn");
+            uue_ch_btn.BackColor = Color.FloralWhite;
             uue_ch_btn.ForeColor = Color.FromArgb(110, 0, 0);
             uue_ch_btn.Name = "uue_ch_btn";
             uue_ch_btn.UseVisualStyleBackColor = false;
@@ -491,8 +491,8 @@
             // 
             // Otsi_ch_btn
             // 
-            Otsi_ch_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(Otsi_ch_btn, "Otsi_ch_btn");
+            Otsi_ch_btn.BackColor = Color.FloralWhite;
             Otsi_ch_btn.ForeColor = Color.FromArgb(110, 0, 0);
             Otsi_ch_btn.Name = "Otsi_ch_btn";
             Otsi_ch_btn.UseVisualStyleBackColor = false;
@@ -500,8 +500,8 @@
             // 
             // change_ch_btn
             // 
-            change_ch_btn.BackColor = Color.FloralWhite;
             resources.ApplyResources(change_ch_btn, "change_ch_btn");
+            change_ch_btn.BackColor = Color.FloralWhite;
             change_ch_btn.ForeColor = Color.FromArgb(110, 0, 0);
             change_ch_btn.Name = "change_ch_btn";
             change_ch_btn.UseVisualStyleBackColor = false;

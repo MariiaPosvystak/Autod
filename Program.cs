@@ -1,5 +1,7 @@
 using System.Globalization;
 using System.Threading;
+using Autod.Properties;
+
 
 namespace Autod
 {
@@ -11,7 +13,7 @@ namespace Autod
         [STAThread]
         static void Main()
         {
-            string lang = Properties.Settings.Default.UserLanguage;
+            string lang = Autod.Properties.Settings.Default.UserLanguage;
 
             if (string.IsNullOrWhiteSpace(lang))
                 lang = "et-EE"; // vaikimisi

@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
+  <!--
+    Microsoft ResX Schema
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,79 +117,87 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;Autod.Name" xml:space="preserve">
-    <value>&#x8;</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="&gt;&gt;Telefon_oma_lbl.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;Omanikud.Name" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="Omanik.Text" xml:space="preserve">
     <value>Owners</value>
+  </data>
+  <data name="Autod.Text" xml:space="preserve">
+    <value>Cars</value>
+  </data>
+  <data name="HjT.Text" xml:space="preserve">
+    <value>Maintenances and Services</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="name_oma_lbl.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 109</value>
   </data>
   <data name="name_oma_lbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 28</value>
+    <value>175, 28</value>
   </data>
   <data name="name_oma_lbl.Text" xml:space="preserve">
     <value>First and last name</value>
   </data>
+  <data name="Telefon_oma_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 28</value>
+  </data>
   <data name="Telefon_oma_lbl.Text" xml:space="preserve">
     <value>Phone number</value>
+  </data>
+  <data name="Omanikud.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 55</value>
   </data>
   <data name="Omanikud.Text" xml:space="preserve">
     <value>Owners</value>
   </data>
-  <data name="&gt;&gt;Autod_lbl.Parent" xml:space="preserve">
-    <value>&#x8;</value>
-  </data>
-  <data name="Autod.Text" xml:space="preserve">
-    <value>Cars</value>
-  </data>
   <data name="Brand_auto_lbl.Text" xml:space="preserve">
     <value>Brand</value>
+  </data>
+  <data name="OmaId_auto_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 28</value>
   </data>
   <data name="OmaId_auto_lbl.Text" xml:space="preserve">
     <value>Owner</value>
   </data>
+  <data name="RN_auto_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 28</value>
+  </data>
   <data name="RN_auto_lbl.Text" xml:space="preserve">
     <value>Registration number</value>
+  </data>
+  <data name="Mudel_auto_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 28</value>
   </data>
   <data name="Mudel_auto_lbl.Text" xml:space="preserve">
     <value>Model</value>
   </data>
+  <data name="Autod_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 55</value>
+  </data>
   <data name="Autod_lbl.Text" xml:space="preserve">
     <value>Cars</value>
   </data>
-  <data name="&gt;&gt;tenus_vaata_btn.Parent" xml:space="preserve">
-    <value>&#x8;</value>
-  </data>
-  <data name="&gt;&gt;teenus_cb.Parent" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="HjT.Text" xml:space="preserve">
-    <value>Maintenances and Services</value>
-  </data>
-  <data name="mileage_lbl.Text" xml:space="preserve">
-    <value>Mileage</value>
+  <data name="hod_kuu_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 20</value>
   </data>
   <data name="hod_kuu_lbl.Text" xml:space="preserve">
     <value>Date</value>
   </data>
+  <data name="hold_ten_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
   <data name="hold_ten_lbl.Text" xml:space="preserve">
     <value>Service</value>
+  </data>
+  <data name="hold_auto_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 20</value>
   </data>
   <data name="hold_auto_lbl.Text" xml:space="preserve">
     <value>Car</value>
   </data>
   <data name="tenus_vaata_btn.Text" xml:space="preserve">
     <value>See services</value>
+  </data>
+  <data name="Holdus_lbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 55</value>
   </data>
   <data name="Holdus_lbl.Text" xml:space="preserve">
     <value>Maintenance records</value>

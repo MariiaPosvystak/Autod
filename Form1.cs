@@ -1,7 +1,8 @@
-using Autod.Data;
+Ôªøusing Autod.Data;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
 using System.Globalization;
+using Autod.Properties;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
@@ -40,9 +41,9 @@ namespace Autod
             keel_cb.Items.Add("Eesti");
             keel_cb.Items.Add("English");
             keel_cb.SelectedItem = "Eesti";     
-            string lang = Autod.Properties.Settings.Default.UserLanguage;
+            string lang = Properties.Settings.Default.UserLanguage;
 
-            if (lang == "en-US")
+            if (lang == "en")
                 keel_cb.SelectedItem = "English";
             else
                 keel_cb.SelectedItem = "Eesti";
@@ -141,7 +142,10 @@ namespace Autod
         }
         private void LaeHooldus()
         {
-            dataGridView_hold.DataSource = _db.Hoolduse_Kirje.Include(cs => cs.Car).Include(cs => cs.Service).Select(cs => new
+            dataGridView_hold.DataSource = _db.Hoolduse_Kirje
+                .Include(cs => cs.Car)
+                .Include(cs => cs.Service)
+                .Select(cs => new
             {
                 Autod = cs.Car.Brand,
                 Teenus = cs.Service.Name,
@@ -217,9 +221,10 @@ namespace Autod
                     MessageBox.Show("Valige teenus!");
                     return;
                 }
-                if (!DateTime.TryParse(hodl_datetime.Text, out DateTime kuup) || !int.TryParse(mileage_txt.Text, out int aeg))
+                if (!DateTime.TryParse(hodl_datetime.Text, out DateTime kuup) || 
+                    !int.TryParse(mileage_txt.Text, out int aeg))
                 {
-                    MessageBox.Show("Kuup‰ev vıi l‰bisıit on valesformaadis!");
+                    MessageBox.Show("Kuup√§ev v√µi l√§bis√µit on vales formaadis!");
                     return;
                 }
                 var uus2 = new CarService
@@ -241,10 +246,12 @@ namespace Autod
             {
                 if (dataGridView_omanik.SelectedRows.Count == 0)
                 {
-                    MessageBox.Show("Palun valige kasutatav omanik.", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Palun valige kasutatav omanik.", "Viga", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                string omanikNimetus = dataGridView_omanik.SelectedRows[0].Cells["FullName"].Value?.ToString() ?? "valitud omanik";
+                string omanikNimetus = dataGridView_omanik.SelectedRows[0].Cells["FullName"]
+                    .Value?.ToString() ?? "valitud omanik";
                 DialogResult vastus = MessageBox.Show(
                     $"Kas olete kindel, et soovite kustuta omanik: {omanikNimetus}?",
                     "Kustutamise kinnitus",
@@ -409,12 +416,12 @@ namespace Autod
                 }
                 if (!DateTime.TryParse(hodl_datetime.Text, out DateTime newDate))
                 {
-                    MessageBox.Show("Kuup‰ev on vales formaadis!");
+                    MessageBox.Show("Kuup–¥ev on vales formaadis!");
                     return;
                 }
                 if (!int.TryParse(mileage_txt.Text, out int newMileage))
                 {
-                    MessageBox.Show("L‰bisıit peab olema arv!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("L–¥bis—Öit peab olema arv!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 _db.Hoolduse_Kirje.Remove(oldEntry);
@@ -438,7 +445,7 @@ namespace Autod
             {
                 if (string.IsNullOrWhiteSpace(oma_nimi_txt.Text) && string.IsNullOrEmpty(oma_tel_txt.Text))
                 {
-                    MessageBox.Show("Sisesta omaniku nimi vıi telefoninumber!");
+                    MessageBox.Show("Sisesta omaniku nimi v—Öi telefoninumber!");
                 }
                 else
                 {
@@ -467,7 +474,7 @@ namespace Autod
                 if (string.IsNullOrWhiteSpace(brand_auto_txt.Text) && string.IsNullOrEmpty(mudel_auto_txt.Text)
                     && string.IsNullOrWhiteSpace(RN_auto_txt.Text) && string.IsNullOrEmpty(OmaId_auto_cb.Text))
                 {
-                    MessageBox.Show("Sisesta omaniku nimi vıi telefoninumber!");
+                    MessageBox.Show("Sisesta omaniku nimi v—Öi telefoninumber!");
                 }
                 else
                 {
@@ -505,7 +512,7 @@ namespace Autod
                 if (string.IsNullOrWhiteSpace(hold_auto_cb.Text) && string.IsNullOrEmpty(teenus_cb.Text) &&
                     string.IsNullOrWhiteSpace(hodl_datetime.Text) && string.IsNullOrEmpty(mileage_txt.Text))
                 {
-                    MessageBox.Show("Sisesta omaniku nimi vıi telefoninumber!");
+                    MessageBox.Show("Sisesta omaniku nimi v—Öi telefoninumber!");
                 }
                 else
                 {
@@ -530,7 +537,7 @@ namespace Autod
                         }
                         else
                         {
-                            MessageBox.Show("Kuup‰ev on vales formaadis!");
+                            MessageBox.Show("Kuup–¥ev on vales formaadis!");
                             return;
                         }
                     }
@@ -542,7 +549,7 @@ namespace Autod
                         }
                         else
                         {
-                            MessageBox.Show("L‰bisıit peab olema arv!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("L–¥bis—Öit peab olema arv!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
@@ -712,7 +719,7 @@ namespace Autod
         {
             if (string.IsNullOrWhiteSpace(nim_teen_txt.Text) && string.IsNullOrEmpty(hind_teen_txt.Text))
             {
-                MessageBox.Show("Sisesta omaniku nimi vıi telefoninumber!");
+                MessageBox.Show("Sisesta omaniku nimi v—Öi telefoninumber!");
             }
             else
             {
