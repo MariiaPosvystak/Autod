@@ -18,7 +18,7 @@ namespace Autod
         private readonly AutoDbContext _db;
         public Form1()
         {
-            this.Size = new Size(826, 787);
+            this.Size = new Size(723, 594);
             _db = new AutoDbContext();
             InitializeComponent();
             LaeOmanik();
@@ -51,7 +51,7 @@ namespace Autod
         }
         private void tabC_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(826, 787);
+            this.Size = new Size(723, 594);
             Controls.Remove(otsi_teen_txt);
             Controls.Remove(hind_teen_txt);
             Controls.Remove(nim_teen_txt);
@@ -445,7 +445,7 @@ namespace Autod
             {
                 if (string.IsNullOrWhiteSpace(oma_nimi_txt.Text) && string.IsNullOrEmpty(oma_tel_txt.Text))
                 {
-                    MessageBox.Show("Sisesta omaniku nimi vхi telefoninumber!");
+                    MessageBox.Show("Sisesta omaniku nimi või telefoninumber!");
                 }
                 else
                 {
@@ -471,73 +471,82 @@ namespace Autod
             }
             else if (tabC.SelectedTab == Autod)
             {
-                if (string.IsNullOrWhiteSpace(brand_auto_txt.Text) && string.IsNullOrEmpty(mudel_auto_txt.Text)
-                    && string.IsNullOrWhiteSpace(RN_auto_txt.Text) && string.IsNullOrEmpty(OmaId_auto_cb.Text))
+                if (string.IsNullOrWhiteSpace(brand_auto_txt.Text) &&
+                    string.IsNullOrEmpty(mudel_auto_txt.Text) &&
+                    string.IsNullOrEmpty(RN_auto_txt.Text) &&
+                    string.IsNullOrWhiteSpace(OmaId_auto_cb.Text))
                 {
-                    MessageBox.Show("Sisesta omaniku nimi vхi telefoninumber!");
+                    MessageBox.Show("Sisesta mark või mudel või regnumber või omaniku nimi!");
                 }
                 else
                 {
-                    var query = _db.Auto.AsQueryable();
+                    var query1 = _db.Auto.AsQueryable();
                     if (!string.IsNullOrWhiteSpace(brand_auto_txt.Text))
                     {
-                        query = query.Where(a => a.Brand.Contains(brand_auto_txt.Text));
+                        query1 = query1.Where(c => c.Brand.Contains(brand_auto_txt.Text));
                     }
                     if (!string.IsNullOrWhiteSpace(mudel_auto_txt.Text))
                     {
-                        query = query.Where(a => a.Model.Contains(mudel_auto_txt.Text));
+                        query1 = query1.Where(c => c.Model.Contains(mudel_auto_txt.Text));
                     }
                     if (!string.IsNullOrWhiteSpace(RN_auto_txt.Text))
                     {
-                        query = query.Where(a => a.RegistrationNumber.Contains(RN_auto_txt.Text));
+                        query1 = query1.Where(c => c.RegistrationNumber.Contains(RN_auto_txt.Text));
                     }
                     if (!string.IsNullOrWhiteSpace(OmaId_auto_cb.Text))
                     {
                         string ownerName = OmaId_auto_cb.Text.Trim();
 
-                        query = query.Where(c => c.Owner.FullName.Contains(ownerName));
+                        query1 = query1.Where(c => c.Owner.FullName.Contains(ownerName));
                     }
-                    var tulemused = query
-                        .Select(a => new
-                        {
-                            a.Brand,
-                            a.Model,
-                            a.RegistrationNumber,
-                            a.OwnerId
-                        }).ToList();
+                    var tulemused = query1
+                       .Select(c => new
+                       {
+                           c.Id,
+                           c.Brand,
+                           c.Model,
+                           c.RegistrationNumber,
+                           Owner = c.Owner.FullName,
+                           c.OwnerId
+                       })
+                       .ToList();
+
+                    dataGridView_autod.DataSource = tulemused;
                 }
             }
             else if (tabC.SelectedTab == HjT)
             {
-                if (string.IsNullOrWhiteSpace(hold_auto_cb.Text) && string.IsNullOrEmpty(teenus_cb.Text) &&
-                    string.IsNullOrWhiteSpace(hodl_datetime.Text) && string.IsNullOrEmpty(mileage_txt.Text))
+                if (string.IsNullOrWhiteSpace(hold_auto_cb.Text) &&
+                    string.IsNullOrEmpty(teenus_cb.Text) &&
+                    string.IsNullOrEmpty(hodl_datetime.Text) &&
+                    string.IsNullOrWhiteSpace(mileage_txt.Text))
                 {
-                    MessageBox.Show("Sisesta omaniku nimi vхi telefoninumber!");
+                    MessageBox.Show("Sisesta kuupäev või läbisõit või teenuste või autoreg !");
                 }
                 else
                 {
-                    var query = _db.Hoolduse_Kirje.AsQueryable();
+                    var query1 = _db.Hoolduse_Kirje.AsQueryable();
                     if (!string.IsNullOrWhiteSpace(hold_auto_cb.Text))
                     {
-                        string autoName = hold_auto_cb.Text.Trim();
+                        string auto = hold_auto_cb.Text.Trim();
 
-                        query = query.Where(c => c.Car.Brand.Contains(autoName));
+                        query1 = query1.Where(cs => cs.Car.RegistrationNumber.Contains(auto));
                     }
                     if (!string.IsNullOrWhiteSpace(teenus_cb.Text))
                     {
-                        string ownerName = teenus_cb.Text.Trim();
+                        string teenuste = teenus_cb.Text.Trim();
 
-                        query = query.Where(c => c.Service.Name.Contains(ownerName));
+                        query1 = query1.Where(cs => cs.Service.Name.Contains(teenuste));
                     }
                     if (!string.IsNullOrWhiteSpace(hodl_datetime.Text))
                     {
                         if (DateTime.TryParse(hodl_datetime.Text, out DateTime searchDate))
                         {
-                            query = query.Where(cs => cs.DateOfService == searchDate);
+                            query1 = query1.Where(cs => cs.DateOfService == searchDate);
                         }
                         else
                         {
-                            MessageBox.Show("Kuupдev on vales formaadis!");
+                            MessageBox.Show("Kuupäev on vales formaadis!");
                             return;
                         }
                     }
@@ -545,22 +554,27 @@ namespace Autod
                     {
                         if (int.TryParse(mileage_txt.Text, out int mileage))
                         {
-                            query = query.Where(cs => cs.Mileage == mileage);
+                            query1 = query1.Where(cs => cs.Mileage == mileage);
                         }
                         else
                         {
-                            MessageBox.Show("Lдbisхit peab olema arv!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Läbisõit peab olema arv!", "Viga", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
-                    var tulemused = query
-                        .Select(h => new
-                        {
-                            h.CarId,
-                            h.ServiceId,
-                            h.DateOfService,
-                            h.Mileage
-                        }).ToList();
+                    var tulemused = query1
+                       .Select(cs => new
+                       {
+                           car = cs.Car.RegistrationNumber,
+                           cs.CarId,
+                           teenus = cs.Service.Name,
+                           cs.ServiceId,
+                           cs.DateOfService,
+                           cs.Mileage,
+                       })
+                       .ToList();
+
+                    dataGridView_hold.DataSource = tulemused;
                 }
             }
         }
@@ -569,7 +583,7 @@ namespace Autod
         //
         private void tenus_vaata_btn_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(1300, 787);
+            this.Size = new Size(1100, 594);
             Controls.Add(otsi_teen_txt);
             Controls.Add(hind_teen_txt);
             Controls.Add(nim_teen_txt);
@@ -582,7 +596,7 @@ namespace Autod
         }
         private void tenus_kinni_btn_Click(object sender, EventArgs e)
         {
-            this.Size = new Size(826, 787);
+            this.Size = new Size(723, 594);
             Controls.Remove(otsi_teen_txt);
             Controls.Remove(hind_teen_txt);
             Controls.Remove(nim_teen_txt);
@@ -717,34 +731,23 @@ namespace Autod
         }
         private void otsi_ch_btn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(nim_teen_txt.Text) && string.IsNullOrEmpty(hind_teen_txt.Text))
-            {
-                MessageBox.Show("Sisesta omaniku nimi vхi telefoninumber!");
-            }
-            else
-            {
-                var query = _db.Teenus.AsQueryable();
-                if (!string.IsNullOrWhiteSpace(nim_teen_txt.Text))
-                {
-                    query = query.Where(t => t.Name.Contains(nim_teen_txt.Text));
-                }
-                if (!string.IsNullOrWhiteSpace(hind_teen_txt.Text))
-                {
-                    if (float.TryParse(hind_teen_txt.Text, out float price))
-                    {
-                        query = query.Where(t => t.Price == price);
-                    }
-                }
-                var tulemused = query
-                    .Select(t => new
-                    {
-                        t.Name,
-                        t.Price
-                    })
-                    .ToList();
+            var query = _db.Teenus.AsQueryable();
 
-                dataGridView_teen.DataSource = tulemused;
+            if (!string.IsNullOrWhiteSpace(nim_teen_txt.Text))
+            {
+                query = query.Where(o => o.Name.Contains(nim_teen_txt.Text));
             }
+
+            dataGridView_teen.DataSource = query
+                .Select(o => new
+                {
+                    o.Id,
+                    o.Name,
+                    o.Price
+                })
+                .ToList();
+
+            dataGridView_teen.Columns["Id"].Visible = false;
         }
         //
         // LANG
@@ -774,9 +777,14 @@ namespace Autod
             if (!_keelLaetud)
                 return;
             if (keel_cb.SelectedItem?.ToString() == "English")
+            {
                 ChangeLanguage("en-US");
+            }
             else
+            {
                 ChangeLanguage("et-EE");
+            }
+                
         }
     }
 }
